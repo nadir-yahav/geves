@@ -397,13 +397,17 @@ header{
 }
 .service-icon{
   position:absolute;
-  bottom:-30px;
-  right:-30px;
-  font-size:160px;
-  opacity:0.06;
+  bottom:-20px;
+  right:-20px;
+  font-size:180px;
+  opacity:0.15;
   transform:rotate(15deg);
   pointer-events:none;
   z-index:1;
+  transition:opacity .3s ease;
+}
+.service-card:hover .service-icon{
+  opacity:0.2;
 }
 .service-icon i{
   display:block;
@@ -456,10 +460,14 @@ header{
   position:absolute;
   top:-20px;
   left:-20px;
-  font-size:140px;
-  opacity:0.08;
+  font-size:150px;
+  opacity:0.12;
   transform:rotate(-15deg);
   pointer-events:none;
+  transition:opacity .3s ease;
+}
+.process-step:hover .step-icon{
+  opacity:0.18;
 }
 .step-icon i{
   display:block;
@@ -624,13 +632,13 @@ th{
   font-weight:900;
   color:var(--ink);
   background:#f9fafb;
-  border-bottom:3px solid var(--red);
+  border-bottom: 2px solid #e8ebf0;
   border-top:1px solid var(--line);
   text-align:right;
   position:relative;
 }
 th::after{
-  content:'';
+  /* content:''; */
   position:absolute;
   bottom:-3px;
   right:0;
