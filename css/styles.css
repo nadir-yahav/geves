@@ -591,6 +591,44 @@ td:nth-child(3){color:var(--muted);font-weight:600}
   direction:rtl;
   text-align:right;
 }
+.success-message{
+  margin-top:24px;
+  padding:20px;
+  background:linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius:8px;
+  color:#fff;
+  text-align:center;
+  direction:rtl;
+  animation:slideDown 0.3s ease;
+}
+.success-message i{
+  font-size:48px;
+  color:#fff;
+  margin-bottom:12px;
+  display:block;
+}
+.success-message h4{
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:8px;
+}
+.success-message p{
+  font-size:16px;
+  font-weight:600;
+  line-height:1.6;
+  margin:0;
+  opacity:0.95;
+}
+@keyframes slideDown{
+  from{
+    opacity:0;
+    transform:translateY(-20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 .form-submit{
   margin-top:20px;
 }

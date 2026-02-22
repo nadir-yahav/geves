@@ -159,13 +159,25 @@ if(contactForm){
       .then(function() {
         submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> נשלח בהצלחה!';
         submitBtn.style.background = '#10b981';
+        
+        // Show success message
+        const successDiv = document.createElement('div');
+        successDiv.className = 'success-message';
+        successDiv.innerHTML = `
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>קיבלנו את הפרטים שלך!</h4>
+          <p>תודה שפנית אלינו. נחזור אליך בהקדם האפשרי בטלפון או בווטסאפ.</p>
+        `;
+        contactForm.appendChild(successDiv);
+        
         contactForm.reset();
         
         setTimeout(()=>{
           submitBtn.innerHTML = originalText;
           submitBtn.style.background = '';
           submitBtn.disabled = false;
-        }, 3000);
+          successDiv.remove();
+        }, 5000);
       }, function(error) {
         console.error('Failed to send email:', error);
         submitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> שגיאה, נסה שוב';
