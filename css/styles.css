@@ -337,6 +337,7 @@ header{
   width:100%;
   height:220px;
   background-size:cover;
+  background-position:center;
   position:relative;
   clip-path: polygon(
     0% 0%, 
@@ -354,17 +355,33 @@ header{
     0% 83%
   );
 }
+.card-image::before{
+  content:'';
+  position:absolute;
+  bottom:-15px;
+  left:0;
+  right:0;
+  height:15px;
+  background: repeating-linear-gradient(
+    90deg,
+    currentColor 0px,
+    currentColor 3px,
+    transparent 3px,
+    transparent 8px
+  );
+  opacity:0.15;
+  z-index:2;
+}
 .card-image::after{
   content:'';
   position:absolute;
-  bottom:-10px;
+  bottom:-8px;
   left:0;
   right:0;
-  height:30px;
-  background:inherit;
-  filter:blur(8px);
-  opacity:0.3;
-  z-index:-1;
+  height:8px;
+  background:linear-gradient(to bottom, currentColor, transparent);
+  opacity:0.2;
+  z-index:1;
 }
 .card-content{
   padding:20px;
@@ -438,32 +455,52 @@ header{
 /* Service 1 - Purple (Ceiling) */
 .service-1{
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
+  color:#9c27b0;
 }
 .service-1 .service-icon{
+  color:#9c27b0;
+}
+.service-1 .card-image::before,
+.service-1 .card-image::after{
   color:#9c27b0;
 }
 
 /* Service 2 - Amber (Lighting) */
 .service-2{
   background:linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+  color:#ffa726;
 }
 .service-2 .service-icon{
+  color:#ffa726;
+}
+.service-2 .card-image::before,
+.service-2 .card-image::after{
   color:#ffa726;
 }
 
 /* Service 3 - Cyan (TV Wall) */
 .service-3{
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+  color:#00acc1;
 }
 .service-3 .service-icon{
+  color:#00acc1;
+}
+.service-3 .card-image::before,
+.service-3 .card-image::after{
   color:#00acc1;
 }
 
 /* Service 4 - Teal (Shelves) */
 .service-4{
   background:linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+  color:#26a69a;
 }
 .service-4 .service-icon{
+  color:#26a69a;
+}
+.service-4 .card-image::before,
+.service-4 .card-image::after{
   color:#26a69a;
 }
 
