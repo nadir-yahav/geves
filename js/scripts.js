@@ -34,7 +34,7 @@ if(contactForm){
     if(email) whatsappMessage += `אימייל: ${email}%0A`;
     if(message) whatsappMessage += `%0Aפרטים:%0A${message}`;
     
-    const whatsappUrl = `https://wa.me/972548640933?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/972547556267?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
   });
 }
