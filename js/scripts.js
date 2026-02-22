@@ -22,8 +22,7 @@ document.querySelectorAll('.drawer a[href^="#"]').forEach(a=>{
 const contactForm = document.getElementById('contactForm');
 if(contactForm){
   // Initialize EmailJS with your public key
-  // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-  emailjs.init('YOUR_PUBLIC_KEY');
+  emailjs.init('ccYmTTZEOc7oOHa56');
   
   contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -34,8 +33,7 @@ if(contactForm){
     submitBtn.disabled = true;
     
     // Send email using EmailJS
-    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+    emailjs.sendForm('service_m9i4jfb', 'template_zxccyt6', contactForm)
       .then(function() {
         submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> נשלח בהצלחה!';
         submitBtn.style.background = '#10b981';
