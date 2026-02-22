@@ -528,6 +528,50 @@ td:nth-child(3){color:var(--muted);font-weight:600}
 .contact .row .btn{min-width:200px}
 @media(max-width:420px){ .contact .row .btn{min-width:100%} }
 
+/* Contact Form */
+.contact-form{
+  margin-top:24px;
+  max-width:600px;
+}
+.form-group{
+  margin-bottom:16px;
+}
+.form-group label{
+  display:block;
+  font-weight:700;
+  margin-bottom:6px;
+  color:var(--ink);
+  font-size:16px;
+}
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:5px;
+  font-family:Heebo,sans-serif;
+  font-size:16px;
+  background:#fff;
+  color:var(--ink);
+  transition:border-color .2s;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--red);
+}
+.form-group textarea{
+  resize:vertical;
+  min-height:120px;
+}
+.form-submit{
+  margin-top:20px;
+}
+.form-submit .btn{
+  min-width:200px;
+}
+@media(max-width:420px){ .form-submit .btn{min-width:100%} }
+
 /* Footer */
 footer{
   border-top:1px solid var(--line);
