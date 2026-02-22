@@ -411,7 +411,6 @@ header{
 
 /* Service 1 - Purple (Ceiling) */
 .service-1{
-  border:2px solid #9c27b0;
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
 }
 .service-1 .service-icon{
@@ -420,7 +419,6 @@ header{
 
 /* Service 2 - Amber (Lighting) */
 .service-2{
-  border:2px solid #ffa726;
   background:linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
 }
 .service-2 .service-icon{
@@ -429,7 +427,6 @@ header{
 
 /* Service 3 - Cyan (TV Wall) */
 .service-3{
-  border:2px solid #00acc1;
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
 }
 .service-3 .service-icon{
@@ -438,7 +435,6 @@ header{
 
 /* Service 4 - Teal (Shelves) */
 .service-4{
-  border:2px solid #26a69a;
   background:linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
 }
 .service-4 .service-icon{
