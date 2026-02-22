@@ -505,9 +505,9 @@ header{
   background:var(--soft);
   padding:14px 16px;
   display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  border-bottom:1px solid var(--line);
+  border-bottom:2px solid var(--line);
 }
-.pricing-head strong{font-size: 21px;}
+.pricing-head strong{font-size: 21px; color:var(--ink);}
 .pricing-head .note{color:var(--muted);font-weight:600;font-size: 16px;}
 table{width:100%;border-collapse:collapse}
 th,td{
@@ -519,10 +519,21 @@ th,td{
 tr:nth-child(even){background:#f6f7fb;}
 th{
   font-weight:900;
-  color:#fff;
-  background:linear-gradient(180deg,var(--red),var(--red-700));
-  border-bottom:2px solid var(--red-700);
+  color:var(--ink);
+  background:#f9fafb;
+  border-bottom:3px solid var(--red);
+  border-top:1px solid var(--line);
   text-align:right;
+  position:relative;
+}
+th::after{
+  content:'';
+  position:absolute;
+  bottom:-3px;
+  right:0;
+  left:0;
+  height:3px;
+  background:linear-gradient(90deg, var(--red) 0%, var(--red-700) 100%);
 }
 thead tr{
   background:transparent;
