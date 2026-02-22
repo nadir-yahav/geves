@@ -392,33 +392,19 @@ header{
   position:relative;
   overflow:hidden;
   border:none;
-}
-.process-step::before{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  width:120px;
-  height:120px;
-  opacity:0.1;
-  border-radius:50%;
-  filter:blur(40px);
+  padding:24px;
 }
 .step-icon{
-  width:70px;
-  height:70px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-  margin-bottom:16px;
-  position:relative;
-  z-index:1;
+  position:absolute;
+  top:-20px;
+  left:-20px;
+  font-size:140px;
+  opacity:0.08;
+  transform:rotate(-15deg);
+  pointer-events:none;
 }
 .step-icon i{
-  position:relative;
-  z-index:2;
+  display:block;
 }
 
 /* Step 1 - Blue/Turquoise (WhatsApp) */
@@ -426,13 +412,8 @@ header{
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
   border:2px solid #00bcd4;
 }
-.step-1::before{
-  background:#00bcd4;
-}
 .step-1 .step-icon{
-  background:linear-gradient(135deg, #00bcd4, #0097a7);
-  color:#fff;
-  box-shadow:0 8px 20px rgba(0,188,212,0.3);
+  color:#00bcd4;
 }
 
 /* Step 2 - Purple (Planning) */
@@ -440,13 +421,8 @@ header{
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
   border:2px solid #9c27b0;
 }
-.step-2::before{
-  background:#9c27b0;
-}
 .step-2 .step-icon{
-  background:linear-gradient(135deg, #9c27b0, #7b1fa2);
-  color:#fff;
-  box-shadow:0 8px 20px rgba(156,39,176,0.3);
+  color:#9c27b0;
 }
 
 /* Step 3 - Green (Pricing) */
@@ -454,13 +430,8 @@ header{
   background:linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
   border:2px solid #4caf50;
 }
-.step-3::before{
-  background:#4caf50;
-}
 .step-3 .step-icon{
-  background:linear-gradient(135deg, #4caf50, #388e3c);
-  color:#fff;
-  box-shadow:0 8px 20px rgba(76,175,80,0.3);
+  color:#4caf50;
 }
 
 /* Step 4 - Orange (Execution) */
@@ -468,19 +439,15 @@ header{
   background:linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
   border:2px solid #ff9800;
 }
-.step-4::before{
-  background:#ff9800;
-}
 .step-4 .step-icon{
-  background:linear-gradient(135deg, #ff9800, #f57c00);
-  color:#fff;
-  box-shadow:0 8px 20px rgba(255,152,0,0.3);
+  color:#ff9800;
 }
 
 .process-step h3{
   font-size:22px;
   position:relative;
   z-index:1;
+  margin-bottom:12px;
 }
 .process-step p{
   position:relative;
