@@ -323,12 +323,12 @@ header{
 }
 .card{
   grid-column:span 6;
-  padding: 20px;
-  border:1px solid var(--line);
+  padding: 0;
+  border:none;
   background:#fff;
-  border-radius:8px;
+  border-radius:12px;
   overflow:hidden;
-  box-shadow:0 2px 12px rgba(15,23,42,.08);
+  box-shadow:0 4px 20px rgba(15,23,42,.1);
   transition:all .3s ease;
   display:flex;
   flex-direction:column;
@@ -339,49 +339,25 @@ header{
   background-size:cover;
   background-position:center;
   position:relative;
-  clip-path: polygon(
-    0% 0%, 
-    100% 0%, 
-    100% 80%, 
-    90% 85%, 
-    80% 88%, 
-    70% 90%, 
-    60% 91%, 
-    50% 90%, 
-    40% 88%, 
-    30% 85%, 
-    20% 83%, 
-    10% 82%, 
-    0% 83%
-  );
+  border-radius:0;
+  overflow:hidden;
 }
 .card-image::before{
   content:'';
   position:absolute;
-  bottom:-15px;
-  left:0;
-  right:0;
-  height:15px;
-  background: repeating-linear-gradient(
-    90deg,
-    currentColor 0px,
-    currentColor 3px,
-    transparent 3px,
-    transparent 8px
-  );
-  opacity:0.15;
-  z-index:2;
+  inset:0;
+  background:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.03) 100%);
+  pointer-events:none;
 }
 .card-image::after{
   content:'';
   position:absolute;
-  bottom:-8px;
+  bottom:0;
   left:0;
   right:0;
-  height:8px;
-  background:linear-gradient(to bottom, currentColor, transparent);
-  opacity:0.2;
-  z-index:1;
+  height:4px;
+  background:currentColor;
+  opacity:0.6;
 }
 .card-content{
   padding:20px;
@@ -390,8 +366,8 @@ header{
   flex-direction:column;
 }
 .card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  transform:translateY(-8px);
+  box-shadow:0 12px 40px rgba(15,23,42,.15);
 }
 .card h3{
   font-size:20px;
@@ -456,52 +432,52 @@ header{
 .service-1{
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
   color:#9c27b0;
+  border:2px solid rgba(156, 39, 176, 0.2);
 }
 .service-1 .service-icon{
   color:#9c27b0;
 }
-.service-1 .card-image::before,
-.service-1 .card-image::after{
-  color:#9c27b0;
+.service-1 .card-image{
+  box-shadow:0 8px 24px rgba(156, 39, 176, 0.15), inset 0 -3px 0 rgba(156, 39, 176, 0.3);
 }
 
 /* Service 2 - Amber (Lighting) */
 .service-2{
   background:linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
   color:#ffa726;
+  border:2px solid rgba(255, 167, 38, 0.2);
 }
 .service-2 .service-icon{
   color:#ffa726;
 }
-.service-2 .card-image::before,
-.service-2 .card-image::after{
-  color:#ffa726;
+.service-2 .card-image{
+  box-shadow:0 8px 24px rgba(255, 167, 38, 0.15), inset 0 -3px 0 rgba(255, 167, 38, 0.3);
 }
 
 /* Service 3 - Cyan (TV Wall) */
 .service-3{
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
   color:#00acc1;
+  border:2px solid rgba(0, 172, 193, 0.2);
 }
 .service-3 .service-icon{
   color:#00acc1;
 }
-.service-3 .card-image::before,
-.service-3 .card-image::after{
-  color:#00acc1;
+.service-3 .card-image{
+  box-shadow:0 8px 24px rgba(0, 172, 193, 0.15), inset 0 -3px 0 rgba(0, 172, 193, 0.3);
 }
 
 /* Service 4 - Teal (Shelves) */
 .service-4{
   background:linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
   color:#26a69a;
+  border:2px solid rgba(38, 166, 154, 0.2);
 }
 .service-4 .service-icon{
   color:#26a69a;
 }
-.service-4 .card-image::before,
-.service-4 .card-image::after{
-  color:#26a69a;
+.service-4 .card-image{
+  box-shadow:0 8px 24px rgba(38, 166, 154, 0.15), inset 0 -3px 0 rgba(38, 166, 154, 0.3);
 }
 
 /* Process Steps */
