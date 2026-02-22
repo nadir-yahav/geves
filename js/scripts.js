@@ -35,7 +35,12 @@ if(contactForm){
     showError('name', 'נא למלא שם מלא');
   });
   nameInput?.addEventListener('input', ()=>{
-    if(nameInput.value.trim()) hideError('name');
+    const val = nameInput.value.trim();
+    if(val && !isValidName(val)){
+      showError('name', 'השם חייב להכיל לפחות 2 תווים');
+    } else if(val) {
+      hideError('name');
+    }
   });
   
   phoneInput?.addEventListener('invalid', (e)=>{
@@ -43,7 +48,12 @@ if(contactForm){
     showError('phone', 'נא למלא מספר טלפון');
   });
   phoneInput?.addEventListener('input', ()=>{
-    if(phoneInput.value.trim()) hideError('phone');
+    const val = phoneInput.value.trim();
+    if(val && !isValidIsraeliPhone(val)){
+      showError('phone', 'נא למלא מספר טלפון ישראלי תקין (נייד או קווי)');
+    } else if(val){
+      hideError('phone');
+    }
   });
   
   emailInput?.addEventListener('invalid', (e)=>{
@@ -82,6 +92,25 @@ if(contactForm){
     field.classList.remove('error');
   }
   
+  function isValidIsraeliPhone(phone){
+    // Remove spaces, dashes, and parentheses
+    const cleaned = phone.replace(/[\s\-()]/g, '');
+    
+    // Must start with 0 and be 9-10 digits
+    if(!/^0\d{8,9}$/.test(cleaned)) return false;
+    
+    // Valid prefixes for mobile: 050, 051, 052, 053, 054, 055, 058
+    // Valid prefixes for landline: 02, 03, 04, 08, 09, 072, 073, 076, 077, 078
+    const validPrefixes = /^(05[012345678]|0[2-4]|08|09|07[23678])/;
+    return validPrefixes.test(cleaned);
+  }
+  
+  function isValidName(name){
+    // At least 2 characters, can contain letters, spaces, and Hebrew characters
+    const trimmed = name.trim();
+    return trimmed.length >= 2;
+  }
+  
   contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     
@@ -92,15 +121,28 @@ if(contactForm){
     
     // Validate
     let isValid = true;
-    if(!nameInput.value.trim()){
+    
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const email = emailInput.value.trim();
+    
+    if(!name){
       showError('name', 'נא למלא שם מלא');
       isValid = false;
-    }
-    if(!phoneInput.value.trim()){
-      showError('phone', 'נא למלא מספר טלפון');
+    } else if(!isValidName(name)){
+      showError('name', 'השם חייב להכיל לפחות 2 תווים');
       isValid = false;
     }
-    if(emailInput.value && !emailInput.validity.valid){
+    
+    if(!phone){
+      showError('phone', 'נא למלא מספר טלפון');
+      isValid = false;
+    } else if(!isValidIsraeliPhone(phone)){
+      showError('phone', 'נא למלא מספר טלפון ישראלי תקין (נייד או קווי)');
+      isValid = false;
+    }
+    
+    if(email && !emailInput.validity.valid){
       showError('email', 'נא למלא כתובת אימייל תקינה');
       isValid = false;
     }
