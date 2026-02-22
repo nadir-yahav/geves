@@ -1,834 +1,311 @@
-
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>עבודות גבס ותאורה | תקרות צפות, הנמכות וקירות טלוויזיה</title>
-  <meta name="description" content="עבודות גבס ותאורה בקו נקי: הנמכות תקרה, תקרות צפות, קירות טלוויזיה ונישות. מתחילים במדידה קצרה, מסכמים מה עושים, ומסיימים בגימור שמוכן לצבע." />
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>עבודות גבס | הנמכת תקרה תקרה צפה קיר טלוויזיה</title>
+  <meta name="description" content="עבודות גבס : הנמכות תקרה, תקרות צפות, קירות טלוויזיה, נישות ומדפים. מחירון מפורט, גלריית תמונות ויצירת קשר מהירה.">
 
-  <meta name="theme-color" content="#e11d2f" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#b91926" media="(prefers-color-scheme: dark)">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root{
-      --red:#e11d2f;
-      --red-700:#b91926;
-      --ink:#0b1220;
-      --muted:#475569;
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --line:rgba(2,6,23,.10);
-      --shadow: 0 18px 55px rgba(2,6,23,.10);
-      --shadow2: 0 10px 28px rgba(2,6,23,.10);
-      --radius:22px;
-      --header-h:70px;
-
-      /* תמונות ממאגר חינמי (Unsplash) */
-      --hero-img:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2200&q=80');
-      --g-1:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80');
-      --g-2:url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1600&q=80');
-      --g-3:url('https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1600&q=80');
-      --g-4:url('https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=1600&q=80');
-      --g-5:url('https://images.unsplash.com/photo-1526887593587-a307ea5d46b4?auto=format&fit=crop&w=1600&q=80');
-      --g-6:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80');
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
-    body{
-      font-family:Heebo,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1000px 520px at 50% -20%, rgba(225,29,47,.10), transparent 60%),
-        radial-gradient(900px 520px at 10% 0%, rgba(225,29,47,.06), transparent 60%),
-        var(--bg);
-      line-height:1.75;
-      overflow-x:hidden;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
-
-    /* ===== Header ===== */
-    header{
-      position:sticky;top:0;z-index:3000;height:var(--header-h);
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      height:var(--header-h);
-      display:flex;align-items:center;gap:14px;
-    }
-    .brand{
-      display:flex;align-items:center;gap:10px;font-weight:900;
-      letter-spacing:.2px;
-    }
-    .brand .mark{
-      width:34px;height:34px;border-radius:12px;
-      background:linear-gradient(180deg,var(--red),var(--red-700));
-      box-shadow:0 14px 28px rgba(225,29,47,.25);
-      display:grid;place-items:center;color:#fff;font-size:16px;
-    }
-    .brand .t1{font-size:16px}
-    .brand .t2{font-size:12px;color:var(--muted);font-weight:700;margin-top:-2px}
-    .brandText{display:flex;flex-direction:column;line-height:1.1}
-
-    nav.links{display:flex;gap:10px;align-items:center;margin-inline-start:auto}
-    nav.links a{
-      font-weight:800;font-size:13px;color:rgba(2,6,23,.86);
-      padding:10px 12px;border-radius:999px;border:1px solid transparent;
-      transition:.2s;
-    }
-    nav.links a:hover{background:rgba(2,6,23,.04);border-color:rgba(2,6,23,.08)}
-    .nav-cta{display:flex;gap:10px;align-items:center}
-    .burger{
-      border:1px solid rgba(2,6,23,.10);
-      background:rgba(255,255,255,.8);
-      width:42px;height:42px;border-radius:14px;
-      display:none;place-items:center;
-      box-shadow:0 10px 26px rgba(2,6,23,.08);
-      cursor:pointer;
-    }
-
-    /* ===== Buttons ===== */
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 16px;border-radius:16px;font-weight:900;
-      border:1px solid transparent;cursor:pointer;transition:.22s;
-      user-select:none;
-      white-space:nowrap;
-    }
-    .btn i{font-size:16px}
-    .btn-primary{
-      background:linear-gradient(180deg,var(--red),var(--red-700));
-      color:#fff;
-      box-shadow:0 16px 38px rgba(225,29,47,.22);
-    }
-    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 18px 44px rgba(225,29,47,.26)}
-    .btn-ghost{
-      background:rgba(2,6,23,.04);
-      border-color:rgba(2,6,23,.10);
-      color:rgba(2,6,23,.90);
-    }
-    .btn-ghost:hover{background:rgba(2,6,23,.06)}
-    .btn-outline{
-      background:#fff;border-color:rgba(225,29,47,.28);
-      color:rgba(225,29,47,.95);
-    }
-    .btn-outline:hover{background:rgba(225,29,47,.06)}
-
-    /* תיקון כפתורים נשברים במובייל */
-    .btnrow{display:flex;gap:12px;flex-wrap:wrap}
-    .btnrow .btn{flex:0 1 auto}
-    @media (max-width:520px){
-      .btnrow{gap:10px}
-      .btnrow .btn{
-        width:100%;
-        justify-content:center;
-        border-radius:18px;
-      }
-      nav.links{display:none}
-      .burger{display:grid;margin-inline-start:auto}
-      .nav-cta{display:none}
-    }
-
-    /* ===== Drawer (ימין, רוחב קבוע) ===== */
-    #drawer-toggle{display:none}
-    .drawer-backdrop{
-      position:fixed;inset:0;background:rgba(2,6,23,.55);
-      opacity:0;pointer-events:none;transition:.25s;z-index:5000;
-    }
-    .drawer{
-      position:fixed;top:0;right:0;height:100vh;width:300px;max-width:82vw;
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-      border-inline-start:1px solid var(--line);
-      box-shadow:-18px 0 60px rgba(2,6,23,.18);
-      transform:translateX(102%);transition:transform .28s ease;
-      z-index:5001;padding:18px;
-      display:flex;flex-direction:column;gap:10px;
-    }
-    #drawer-toggle:checked ~ .drawer-backdrop{opacity:1;pointer-events:auto}
-    #drawer-toggle:checked ~ .drawer{transform:translateX(0)}
-    body.menu-open{overflow:hidden}
-    .drawer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-    .drawer-top strong{font-size:15px}
-    .drawer-close{
-      width:40px;height:40px;border-radius:14px;
-      border:1px solid rgba(2,6,23,.10);
-      background:rgba(2,6,23,.04);
-      cursor:pointer;
-    }
-    .drawer a{
-      padding:12px 12px;border-radius:16px;font-weight:900;
-      border:1px solid rgba(2,6,23,.08);
-      background:#fff;
-    }
-    .drawer a:hover{background:rgba(2,6,23,.03)}
-    .drawer .drawer-cta{margin-top:auto;display:grid;gap:10px}
-
-    /* ===== Badge מחיר (שמאל) ===== */
-    .price-badge{
-      position:fixed;
-      left:max(12px,env(safe-area-inset-left));
-      top:calc(var(--header-h) + 12px);
-      z-index:2600;
-      display:flex;align-items:center;gap:10px;
-      padding:10px 12px;border-radius:999px;
-      background:rgba(255,255,255,.86);
-      border:1px solid rgba(225,29,47,.22);
-      box-shadow:0 18px 45px rgba(2,6,23,.12);
-      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-      color:rgba(2,6,23,.92);
-    }
-    .price-badge .bubble{
-      width:42px;height:42px;border-radius:50%;
-      background:conic-gradient(from 200deg, rgba(225,29,47,.95), rgba(225,29,47,.18), rgba(225,29,47,.95));
-      display:grid;place-items:center;
-      position:relative;
-      box-shadow:0 14px 28px rgba(225,29,47,.18);
-    }
-    .price-badge .bubble::after{
-      content:""; position:absolute; inset:2px; border-radius:inherit;
-      background:linear-gradient(180deg,#fff, rgba(255,255,255,.75));
-    }
-    .price-badge .bubble span{
-      position:relative; z-index:1;
-      color:rgba(2,6,23,.95);
-      font-weight:900; font-size:14px;
-    }
-    .price-badge .text{
-      display:flex;flex-direction:column;line-height:1.1;
-    }
-    .price-badge .text .big{font-weight:900;font-size:13px}
-    .price-badge .text .small{font-weight:800;font-size:11px;color:rgba(71,85,105,.95)}
-    @media (max-width:520px){
-      .price-badge{left:10px;right:auto}
-      .price-badge .text .big{font-size:12px}
-      .price-badge .bubble{width:40px;height:40px}
-    }
-
-    /* ===== Hero ===== */
-    .hero{
-      padding:34px 0 10px;
-    }
-    .hero-grid{
-      display:grid;grid-template-columns: 1.15fr .85fr;gap:18px;align-items:stretch;
-    }
-    .hero-card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:26px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-card::before{
-      content:""; position:absolute; inset:-40% -40% auto -40%;
-      height:220px;
-      background:radial-gradient(60% 70% at 30% 30%, rgba(225,29,47,.18), transparent 60%);
-      pointer-events:none;
-    }
-    .kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      background:rgba(225,29,47,.08);
-      border:1px solid rgba(225,29,47,.18);
-      padding:8px 12px;border-radius:999px;
-      font-weight:900;font-size:12px;color:rgba(225,29,47,.95);
-    }
-    h1{
-      margin-top:14px;
-      font-size:clamp(28px, 4.2vw, 48px);
-      line-height:1.08;
-      letter-spacing:-.2px;
-      color:rgba(2,6,23,.95);
-    }
-    .hero p{
-      margin-top:10px;
-      color:rgba(71,85,105,.92);
-      font-weight:700;
-      max-width:60ch;
-    }
-    .list{
-      margin-top:18px;
-      display:grid;gap:10px;
-      padding-inline-start:8px;
-    }
-    .list li{
-      list-style:none;
-      display:flex;align-items:flex-start;gap:10px;
-      color:rgba(71,85,105,.92);
-      font-weight:800;
-    }
-    .check{
-      width:22px;height:22px;border-radius:50%;
-      background:rgba(225,29,47,.10);
-      border:1px solid rgba(225,29,47,.20);
-      display:grid;place-items:center;flex:0 0 auto;margin-top:2px;
-      color:rgba(225,29,47,.95);
-    }
-
-    .hero-actions{margin-top:18px}
-    .hero-note{margin-top:10px;color:rgba(71,85,105,.92);font-weight:700;font-size:13px}
-
-    .hero-photo{
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.0), rgba(2,6,23,.08)),
-        var(--hero-img);
-      background-size:cover;
-      background-position:center;
-      position:relative;
-      min-height:340px;
-    }
-    .hero-photo::after{
-      content:""; position:absolute; inset:0;
-      background:
-        radial-gradient(60% 40% at 70% 20%, rgba(225,29,47,.18), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.0), rgba(2,6,23,.10));
-      pointer-events:none;
-    }
-    .hero-photo .stats{
-      position:absolute; inset:auto 14px 14px 14px;
-      display:grid;grid-template-columns: repeat(3,1fr);
-      gap:10px;
-      z-index:2;
-    }
-    .stat{
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:10px 10px;
-      box-shadow:var(--shadow2);
-      text-align:center;
-    }
-    .stat .n{font-weight:900;color:rgba(2,6,23,.95);font-size:14px}
-    .stat .t{color:rgba(71,85,105,.92);font-weight:800;font-size:11px;margin-top:2px}
-
-    @media (max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
-      .hero-photo{min-height:300px}
-    }
-
-    /* ===== Sections ===== */
-    section.block{padding:18px 0}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow2);
-      padding:18px;
-      position:relative;
-    }
-    .card .icon{
-      width:44px;height:44px;border-radius:16px;
-      background:rgba(225,29,47,.08);
-      border:1px solid rgba(225,29,47,.16);
-      display:grid;place-items:center;
-      margin-bottom:10px;
-    }
-    .card .icon i{color:rgba(225,29,47,.95);font-size:18px}
-    .card h3{font-size:16px;line-height:1.15;color:rgba(2,6,23,.95)}
-    .card p{margin-top:8px;color:rgba(71,85,105,.92);font-weight:700}
-
-    .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:18px 0 12px}
-    .sec-head h2{
-      font-size:24px;letter-spacing:-.2px;color:rgba(2,6,23,.95);
-    }
-    .sec-head .sub{
-      color:rgba(71,85,105,.92);font-weight:800;font-size:13px;
-      max-width:60ch;
-    }
-
-    @media (max-width:900px){
-      .grid3{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      .sec-head{flex-direction:column;align-items:flex-start}
-    }
-
-    /* ===== Pricing ===== */
-    .price-card .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      border:1px solid rgba(225,29,47,.20);
-      background:rgba(225,29,47,.06);
-      padding:8px 10px;border-radius:999px;
-      font-weight:900;color:rgba(225,29,47,.95);font-size:12px;
-    }
-    .price{
-      font-weight:900;font-size:28px;color:rgba(2,6,23,.95);
-    }
-    .subprice{margin-top:6px;color:rgba(71,85,105,.92);font-weight:800}
-    .includes{margin-top:12px;display:grid;gap:10px}
-    .includes li{list-style:none;display:flex;gap:10px;align-items:flex-start;color:rgba(71,85,105,.92);font-weight:800}
-    .includes .check{margin-top:1px}
-
-    /* ===== Gallery ===== */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .shot{
-      position:relative;border-radius:22px;overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow2);
-      background:#fff;
-      min-height:190px;
-    }
-    .shot .img{
-      position:absolute;inset:0;background-size:cover;background-position:center;
-      transform:scale(1.02);
-      transition:transform .35s ease;
-    }
-    .shot::after{
-      content:""; position:absolute; inset:0;
-      background:linear-gradient(180deg, rgba(255,255,255,.0), rgba(2,6,23,.18));
-    }
-    .shot:hover .img{transform:scale(1.07)}
-    .shot .cap{
-      position:absolute; inset:auto 12px 12px 12px; z-index:2;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:10px 12px;
-      box-shadow:0 16px 34px rgba(2,6,23,.10);
-    }
-    .shot .cap strong{font-weight:900;color:rgba(2,6,23,.95);font-size:13px}
-    .shot .cap span{color:rgba(71,85,105,.92);font-weight:800;font-size:12px}
-    .zoom{
-      width:34px;height:34px;border-radius:14px;
-      display:grid;place-items:center;
-      border:1px solid rgba(2,6,23,.10);
-      background:rgba(255,255,255,.95);
-      color:rgba(2,6,23,.80);
-    }
-    @media (max-width:900px){.gallery{grid-template-columns:1fr}}
-
-    /* ===== FAQ ===== */
-    details{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow:var(--shadow2);
-      padding:14px 16px;
-    }
-    details summary{
-      list-style:none;cursor:pointer;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      font-weight:900;color:rgba(2,6,23,.95);
-    }
-    details summary::-webkit-details-marker{display:none}
-    details p{margin-top:10px;color:rgba(71,85,105,.92);font-weight:700}
-    .chev{color:rgba(2,6,23,.45)}
-    details[open] .chev{transform:rotate(180deg)}
-
-    /* ===== Contact ===== */
-    .contact{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:14px;
-      align-items:stretch;
-    }
-    .contact .box{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-    }
-    .contact h3{font-size:16px;color:rgba(2,6,23,.95)}
-    .contact p{margin-top:8px;color:rgba(71,85,105,.92);font-weight:700}
-    .contact .mini{
-      margin-top:12px;display:grid;gap:10px
-    }
-    .mini .row{
-      display:flex;align-items:center;gap:10px;
-      background:rgba(2,6,23,.03);
-      border:1px solid rgba(2,6,23,.08);
-      border-radius:18px;
-      padding:10px 12px;
-      color:rgba(2,6,23,.88);
-      font-weight:800;
-    }
-    .mini .row i{color:rgba(225,29,47,.95)}
-    @media (max-width:900px){.contact{grid-template-columns:1fr}}
-
-    /* ===== Footer ===== */
-    footer{
-      margin-top:18px;
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-      border-top:1px solid var(--line);
-      color:rgba(71,85,105,.95);
-      padding:18px 0;
-    }
-    footer .f{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    footer .f small{font-weight:800}
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- Drawer controls -->
-  <input id="drawer-toggle" type="checkbox" hidden>
 
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="לוגו">
-        <div class="mark">ג</div>
-        <div class="brandText">
-          <div class="t1">עבודות גבס ותאורה</div>
-          <div class="t2">תקרות צפות • הנמכות • קירות טלוויזיה</div>
-        </div>
-      </a>
+<header aria-label="סרגל עליון">
+  <div class="wrap nav">
+    <div class="logo" aria-label="לוגו">
+      <span class="logo-badge"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+      עבודות גבס
+    </div>
 
-      <nav class="links" aria-label="ניווט">
-        <a href="#services">שירותים</a>
-        <a href="#pricing">מחירון</a>
-        <a href="#gallery">גלריה</a>
-        <a href="#faq">שאלות</a>
-        <a href="#contact">צור קשר</a>
-      </nav>
+    <nav class="nav-links" aria-label="תפריט ראשי">
+      <a href="#services"><i class="fa-solid fa-list-check"></i> שירותים</a>
+      <a href="#gallery"><i class="fa-regular fa-image"></i> גלריה</a>
+      <a href="#pricing"><i class="fa-solid fa-shekel-sign"></i> מחירון</a>
+      <a href="#process"><i class="fa-solid fa-route"></i> תהליך עבודה</a>
+      <a href="#contact"><i class="fa-solid fa-phone"></i> יצירת קשר</a>
+    </nav>
 
-      <div class="nav-cta">
-        <a class="btn btn-outline" href="tel:0520000000"><i class="fa-solid fa-phone"></i> שיחה</a>
-        <a class="btn btn-primary" href="https://wa.me/972520000000" target="_blank" rel="nofollow"><i class="fa-brands fa-whatsapp"></i> וואטסאפ</a>
+    <input id="drawer-toggle" type="checkbox" hidden="">
+    <label for="drawer-toggle" class="burger" aria-label="פתח תפריט"><i class="fa-solid fa-bars"></i></label>
+
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <aside class="drawer" role="dialog" aria-label="תפריט מובייל">
+      <div class="drawer-top">
+        <strong>תפריט</strong>
+        <button id="drawer-close" class="drawer-close" aria-label="סגור תפריט">✕</button>
       </div>
 
-      <label class="burger" for="drawer-toggle" aria-label="פתח תפריט"><i class="fa-solid fa-bars"></i></label>
-    </div>
-  </header>
-
-  <!-- Badge מחיר (שמאל) -->
-  <div class="price-badge" aria-live="polite">
-    <div class="bubble"><span>מדידה</span></div>
-    <div class="text">
-      <div class="big">הצעה מדויקת אחרי מדידה</div>
-      <div class="small">מסבירים מה עושים ומה מקבלים</div>
-    </div>
+      <a href="#services"><i class="fa-solid fa-list-check"></i> שירותים</a>
+      <a href="#gallery"><i class="fa-regular fa-image"></i> גלריה</a>
+      <a href="#pricing"><i class="fa-solid fa-shekel-sign"></i> מחירון</a>
+      <a href="#process"><i class="fa-solid fa-route"></i> תהליך עבודה</a>
+      <a href="#contact"><i class="fa-solid fa-phone"></i> יצירת קשר</a>
+    </aside>
   </div>
+</header>
 
-  <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" role="dialog" aria-label="תפריט מובייל">
-    <div class="drawer-top">
-      <strong>תפריט</strong>
-      <button class="drawer-close" id="drawer-close" aria-label="סגור"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <a href="#services">שירותים</a>
-    <a href="#pricing">מחירון</a>
-    <a href="#gallery">גלריה</a>
-    <a href="#faq">שאלות</a>
-    <a href="#contact">צור קשר</a>
+<main>
 
-    <div class="drawer-cta">
-      <a class="btn btn-primary" href="https://wa.me/972520000000" target="_blank" rel="nofollow"><i class="fa-brands fa-whatsapp"></i> דברו איתנו בוואטסאפ</a>
-      <a class="btn btn-ghost" href="tel:0520000000"><i class="fa-solid fa-phone"></i> התקשרו עכשיו</a>
-    </div>
-  </aside>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <h1>עבודות גבס</h1>
+        <p class="sub">
+          הנמכות תקרה תקרות צפות קירות טלוויזיה נישות ומדפים.
+          תכנון לפי החלל והצרכים ביצוע מסודר וליווי עד סיום.
+        </p>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-card">
-          <div class="kicker"><i class="fa-solid fa-star"></i> גבס ותאורה בקו נקי — בלי הפתעות ובלי בלגן</div>
-          <h1>תקרות, נישות וקירות טלוויזיה שנראים כמו תכנון אדריכלי</h1>
-          <p>
-            אנחנו צוות ביצוע שמתמקד בפרטים: קווים ישרים, חיבורים נקיים ותכנון נכון של תאורה ותשתיות.
-            מתחילים במדידה קצרה, מסכמים מה בדיוק עושים, ומתקדמים לעבודה מסודרת עד גימור שמוכן לצבע.
-          </p>
+        <ul class="hero-highlights">
+          <li><span class="tick"><i class="fa-solid fa-check"></i></span> תכנון גבהים ותאורה לפי העיצוב והתקציב</li>
+          <li><span class="tick"><i class="fa-solid fa-check"></i></span> עבודה נקייה מסודרת ועמידה בזמנים</li>
+          <li><span class="tick"><i class="fa-solid fa-check"></i></span> פתרונות פרקטיים לגישה ותחזוקה לפי הצורך</li>
+          <li><span class="tick"><i class="fa-solid fa-check"></i></span> הצעת מחיר ברורה לפי מידות ומורכבות</li>
+        </ul>
 
-          <ul class="list" aria-label="יתרונות">
-            <li><span class="check"><i class="fa-solid fa-check"></i></span> מדידה ותכנון לפי החלל שלכם (גובה, פתחים, מיזוג)</li>
-            <li><span class="check"><i class="fa-solid fa-check"></i></span> הכנות מסודרות לתאורה: פסי לד, ספוטים וגישה לתחזוקה</li>
-            <li><span class="check"><i class="fa-solid fa-check"></i></span> גימור חד שמוכן לצבע חלק — בלי “גלים” ובלי חיבורים בולטים</li>
-            <li><span class="check"><i class="fa-solid fa-check"></i></span> עבודה נקייה, תיאום ציפיות מראש וסגירה עד הסוף</li>
-          </ul>
-
-          <div class="hero-actions">
-            <div class="btnrow">
-              <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-bolt"></i> לתיאום מדידה והצעה</a>
-              <a class="btn btn-ghost" href="#gallery"><i class="fa-regular fa-images"></i> לראות עבודות</a>
-            </div>
-            <div class="hero-note">הכול ברור מראש: מה עושים, כמה זמן זה לוקח, ומה צריך להכין מראש.</div>
-          </div>
-        </div>
-
-        <div class="hero-photo" aria-label="תמונה לדוגמה">
-          <div class="stats" aria-label="נתונים">
-            <div class="stat">
-              <div class="n">תכנון תאורה</div>
-              <div class="t">עומקים נכונים וגישה לתחזוקה</div>
-            </div>
-            <div class="stat">
-              <div class="n">קיר טלוויזיה</div>
-              <div class="t">נישות והסתרת כבלים נקייה</div>
-            </div>
-            <div class="stat">
-              <div class="n">תקרה צפה</div>
-              <div class="t">קו אור אחיד בלי נקודות</div>
-            </div>
-          </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact"><i class="fa-brands fa-whatsapp"></i> שלחו פרטים בווטסאפ</a>
+          <a class="btn btn-ghost" href="#pricing"><i class="fa-solid fa-receipt"></i> לצפייה במחירון</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="block">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <h2>פתרונות גבס ותאורה</h2>
-            <div class="sub">עבודות גבס לבית ולעסק — עם תכנון תשתיות, הכנות לתאורה וגימור שמוכן לצבע.</div>
-          </div>
-        </div>
+  <!-- SERVICES -->
+  <section id="services" class="section anchor-pad">
+    <div class="wrap">
+      <h2>שירותים</h2>
+      <p class="desc">
+        עבודות גבס לדירות חדשות ושיפוצים.
+        אפשר לבצע לפי תכנית אדריכלית או בהתאם לחלל.
+      </p>
 
-        <div class="grid3">
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-ruler-combined"></i></div>
+      <div class="grid">
+        <div class="card c1">
+          <div class="card-image"></div>
+          <div class="card-content">
             <h3>הנמכת תקרה</h3>
-            <p>הנמכה חלקית או מלאה, הסתרת תשתיות והכנות מסודרות לספוטים/פסי לד — כדי שהכול ייראה נקי.</p>
+            <p>להסתרת תשתיות יצירת תאורה נכונה ותיחום אזורים בחלל.</p>
+            <div class="meta">
+              <span class="pill">חדרים</span>
+              <span class="pill">סלון</span>
+              <span class="pill">מטבח</span>
+            </div>
           </div>
+        </div>
 
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="card c2">
+          <div class="card-image"></div>
+          <div class="card-content">
             <h3>תקרה צפה ותאורה היקפית</h3>
-            <p>מסגרת תקרה עם פס לד היקפי וקו אור אחיד. מתכננים עומקים נכונים ודואגים לגישה לתחזוקה.</p>
+            <p>מסגרת גבס עם פס לד או שילוב ספוטים ליצירת עומק ויוקרה.</p>
+            <div class="meta">
+              <span class="pill">פס לד</span>
+              <span class="pill">ספוטים</span>
+              <span class="pill">תכנון גבהים</span>
+            </div>
           </div>
+        </div>
 
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-tv"></i></div>
+        <div class="card c3">
+          <div class="card-image"></div>
+          <div class="card-content">
             <h3>קיר טלוויזיה ונישות</h3>
-            <p>מסגרת, נישה לממיר/מגבר, הכנות לכבלים ושקעים, מדפים ושילוב תאורה — בלי חוטים גלויים.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
-            <h3>קירות דקורטיביים</h3>
-            <p>מחיצות, קירות הפרדה, חיפויים ואלמנטים דקורטיביים — בצורה מאוזנת שלא “חונקת” את החלל.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-            <h3>מדפים וספריות גבס</h3>
-            <p>יחידות בקו אפס עם הקיר, פרופורציות נכונות ופתרונות אחסון. אפשר לשלב תאורה לפי צורך.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-broom"></i></div>
-            <h3>גימור צבע ויישור</h3>
-            <p>שפכטל, ליטוש, חיבורים מדויקים ופינות חדות — כדי שהצביעה תיראה חלקה ואחידה.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="block">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <h2>טווחי מחיר להכוונה</h2>
-            <div class="sub">אלו דוגמאות כדי לקבל סדר גודל. מחיר סופי נקבע לפי מדידה, תשתיות קיימות ורמת גימור (מוכן לצבע / כולל תיקונים).</div>
-          </div>
-        </div>
-
-        <div class="grid3">
-          <div class="card price-card">
-            <div class="top">
-              <div class="pill"><i class="fa-solid fa-tag"></i> פופולרי</div>
-              <div class="price">החל מ ₪1,250</div>
+            <p>קיר מעוצב עם נישות ציוד מעבר כבלים ותכנון נקי לעומסים.</p>
+            <div class="meta">
+              <span class="pill">נישות</span>
+              <span class="pill">מעבר כבלים</span>
+              <span class="pill">מדפים</span>
             </div>
-            <div class="subprice">הנמכת תקרה נקודתית בחדר קטן</div>
-            <ul class="includes">
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> מסגרת גבס והכנה לתאורה</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> שפכטל וגימור נקי</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> תיאום נקודות תאורה לפי תכנית/סימון</li>
-            </ul>
-          </div>
-
-          <div class="card price-card">
-            <div class="top">
-              <div class="pill"><i class="fa-solid fa-bolt"></i> מומלץ</div>
-              <div class="price">החל מ ₪2,900</div>
-            </div>
-            <div class="subprice">תקרה צפה בסלון עם פס לד</div>
-            <ul class="includes">
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> תכנון עומק לפס לד</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> מסגרת היקפית וגישה לתחזוקה</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> גימור שמוכן לצבע חלק</li>
-            </ul>
-          </div>
-
-          <div class="card price-card">
-            <div class="top">
-              <div class="pill"><i class="fa-solid fa-tv"></i> יוקרתי</div>
-              <div class="price">החל מ ₪3,400</div>
-            </div>
-            <div class="subprice">קיר טלוויזיה עם נישות ותאורה</div>
-            <ul class="includes">
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> מסגרת מעוצבת לטלוויזיה</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> הכנות כבלים וממיר</li>
-              <li><span class="check"><i class="fa-solid fa-check"></i></span> אפשרות למדפים ושילוב פס לד</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="block">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <h2>גלריה</h2>
-            <div class="sub">דוגמאות השראה לתקרות, נישות ותאורה. אפשר לבחור סגנון דומה ולהתאים אותו למידות ולחלל שלכם.</div>
           </div>
         </div>
 
-        <div class="gallery">
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-1)"></div>
-            <div class="cap"><div><strong>הנמכת תקרה בסלון</strong><span>קו נקי ותאורה</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-2)"></div>
-            <div class="cap"><div><strong>תקרה צפה</strong><span>פס לד היקפי</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-3)"></div>
-            <div class="cap"><div><strong>קיר טלוויזיה</strong><span>נישה והסתרת כבלים</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-4)"></div>
-            <div class="cap"><div><strong>קיר דקורטיבי</strong><span>מחיצה מעוצבת</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-5)"></div>
-            <div class="cap"><div><strong>מדפים בגבס</strong><span>קו אפס עם הקיר</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-          <article class="shot">
-            <div class="img" style="background-image:var(--g-6)"></div>
-            <div class="cap"><div><strong>תאורה נקודתית</strong><span>ספוטים מדויקים</span></div><div class="zoom"><i class="fa-solid fa-magnifying-glass"></i></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="block">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <h2>שאלות נפוצות</h2>
-            <div class="sub">תשובות קצרות וברורות — כדי שתדעו איך זה עובד ומה צריך להכין מראש.</div>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <details>
-            <summary>האם אתם דואגים גם לחשמל ולספוטים <span class="chev"><i class="fa-solid fa-chevron-down"></i></span></summary>
-            <p>אנחנו מבצעים את ההכנות בגבס לפי תכנית/סימון נקודות תאורה. חשמל מבוצע ע"י חשמלאי מוסמך — אפשר לתאם עם שלכם או דרכנו.</p>
-          </details>
-          <details>
-            <summary>כמה זמן לוקחת הנמכת תקרה <span class="chev"><i class="fa-solid fa-chevron-down"></i></span></summary>
-            <p>בדרך כלל יום עד כמה ימים — תלוי בגודל החלל, כמות תאורה/נישות ורמת הגימור שאתם רוצים.</p>
-          </details>
-          <details>
-            <summary>איך יודעים אם תקרה צפה מתאימה לסלון שלי <span class="chev"><i class="fa-solid fa-chevron-down"></i></span></summary>
-            <p>בודקים גובה תקרה, פרופורציות, מיקום ויטרינות ומיזוג. במדידה מציעים פתרון מאוזן שנראה טוב ולא “מעמיס”.</p>
-          </details>
-          <details>
-            <summary>אפשר לקבל הצעת מחיר בווטסאפ <span class="chev"><i class="fa-solid fa-chevron-down"></i></span></summary>
-            <p>כן. שלחו צילום של החלל, עיר ומידות בסיסיות (אורך/רוחב/גובה אם ידוע) ומה הכיוון. להצעה מדויקת נקבע מדידה קצרה.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="block">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <h2>צור קשר</h2>
-            <div class="sub">שלחו הודעה קצרה ונחזור עם כיוון מחיר וזמן ביצוע. להצעה מדויקת — נקבע מדידה.</div>
-          </div>
-        </div>
-
-        <div class="contact">
-          <div class="box">
-            <h3>דברו איתנו עכשיו</h3>
-            <p>לחיצה אחת ואתם בקשר. כדי שנחזיר תשובה מדויקת, הכי עוזר לשלוח צילום + מידות בסיסיות.</p>
-            <div class="btnrow" style="margin-top:12px">
-              <a class="btn btn-primary" href="https://wa.me/972520000000" target="_blank" rel="nofollow"><i class="fa-brands fa-whatsapp"></i> שלחו וואטסאפ</a>
-              <a class="btn btn-ghost" href="tel:0520000000"><i class="fa-solid fa-phone"></i> התקשרו</a>
-            </div>
-            <p style="margin-top:10px;font-size:13px;color:rgba(71,85,105,.92);font-weight:800">
-              טיפ: כתבו מה מבצעים (תקרה/קיר טלוויזיה/נישות), עיר ומידות בסיסיות.
-            </p>
-          </div>
-
-          <div class="box">
-            <h3>פרטים מהירים</h3>
-            <div class="mini">
-              <div class="row"><i class="fa-solid fa-location-dot"></i> אזור שירות: מרכז והשפלה</div>
-              <div class="row"><i class="fa-regular fa-clock"></i> זמינות: א עד ה 08:00 עד 19:00</div>
-              <div class="row"><i class="fa-solid fa-spray-can-sparkles"></i> גימור שמוכן לצבע חלק ועבודה נקייה</div>
+        <div class="card c4">
+          <div class="card-image"></div>
+          <div class="card-content">
+            <h3>נישות מדפים ודקורציה</h3>
+            <p>מדפי גבס נקיים ומינימליסטיים בהתאם למידות ולשימוש בפועל.</p>
+            <div class="meta">
+              <span class="pill">ספרייה</span>
+              <span class="pill">קיר הפרדה</span>
+              <span class="pill">נישות מעוצבות</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap f">
-      <small>© <span id="year"></span> עבודות גבס ותאורה</small>
-      <small>המחירים בעמוד הם להכוונה בלבד ונקבעים לפי מדידה בפועל</small>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // שנה בפוטר
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- GALLERY -->
+  <section id="gallery" class="section anchor-pad">
+    <div class="wrap">
+      <h2>גלריה</h2>
+      <p class="desc">תמונות לדוגמא כדי להמחיש סגנון ואפשרויות.</p>
 
-    // Drawer open/close
-    const toggle = document.getElementById('drawer-toggle');
-    const backdrop = document.getElementById('drawer-backdrop');
-    const closeBtn = document.getElementById('drawer-close');
+      <div class="gallery">
+        
+        <div class="photo p2 medium"><div class="photo-image"></div></div>
+        <div class="photo p3 short"><div class="photo-image"></div></div>
+        
+        <div class="photo p5 tall"><div class="photo-image"></div></div>
+        <div class="photo p6 short"><div class="photo-image"></div></div>
+        <div class="photo p7 medium"><div class="photo-image"></div></div>
+        <div class="photo p8 short"><div class="photo-image"></div></div>
+        <div class="photo p9 tall"><div class="photo-image"></div></div>
+        
+        
+        
+        <div class="photo p13 short"><div class="photo-image"></div></div>
+        
+        <div class="photo p15 medium"><div class="photo-image"></div></div>
+        <div class="photo p16 tall"><div class="photo-image"></div></div>
+        <div class="photo p17 short"><div class="photo-image"></div></div>
+        
+        
+        <div class="photo p20 short"><div class="photo-image"></div></div>
+        <div class="photo p21 tall"><div class="photo-image"></div></div>
+        
+        <div class="photo p23 tall"><div class="photo-image"></div></div>
+        <div class="photo p1 tall"><div class="photo-image"></div></div>
+      </div>
+    </div>
+  </section>
 
-    function setMenu(open){
-      document.body.classList.toggle('menu-open', open);
-      toggle.checked = open;
-    }
+  <!-- PRICING -->
+  <section id="pricing" class="section anchor-pad">
+    <div class="wrap">
+      <h2>מחירון עבודות גבס</h2>
+      <p class="desc">
+        מחירון מפורט לצורך כיוון.
+        מחיר סופי נקבע לפי מידות מורכבות גישה תשתיות ותאורה.
+      </p>
 
-    // סגירה בלחיצה על הרקע
-    backdrop.addEventListener('click', ()=> setMenu(false));
-    closeBtn.addEventListener('click', ()=> setMenu(false));
+      <div class="pricing">
+        <div class="pricing-head">
+          <strong>מחירים נפוצים</strong>
+          <div class="note">המחירים כוללים עבודה וחומרי גבס בסיסיים. תאורה חשמל וצבע לפי הצורך בנפרד.</div>
+        </div>
 
-    // סגירה אוטומטית אחרי בחירה בתפריט, עם גלילה יציבה
-    document.querySelectorAll('.drawer a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const href = a.getAttribute('href');
-        if(!href) return;
-        // תן לעוגן לעבוד בצורה טבעית, ואז סגור
-        setTimeout(()=> setMenu(false), 120);
-      });
-    });
+        <table>
+          <thead>
+            <tr>
+              <th>סוג עבודה</th>
+              <th>טווח מחיר</th>
+              <th>מה כלול בדרך כלל</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>הנמכת תקרה בחדר עד 12 מ"ר</td>
+              <td>₪1,200 עד ₪2,200</td>
+              <td>שלד גבס וחיפוי הכנה לנקודות לפי תכנית בסיסית</td>
+            </tr>
+            <tr>
+              <td>הנמכת תקרה בסלון או חלל פתוח</td>
+              <td>₪2,800 עד ₪6,500</td>
+              <td>תיחום אזורים הכנות תאורה לפי תכנון</td>
+            </tr>
+            <tr>
+              <td>תקרה צפה היקפית</td>
+              <td>₪2,900 עד ₪7,900</td>
+              <td>מסגרת היקפית הכנה לפס לד תכנון גבהים</td>
+            </tr>
+            <tr>
+              <td>נישה לטלוויזיה בסיסית</td>
+              <td>₪2,700 עד ₪5,200</td>
+              <td>מסגרת כבלים הכנה לציוד בסיסי</td>
+            </tr>
+            <tr>
+              <td>קיר טלוויזיה מעוצב עם נישות ומדפים</td>
+              <td>₪4,800 עד ₪12,000</td>
+              <td>נישות ציוד מדפים תכנון פרופורציות וגישה</td>
+            </tr>
+            <tr>
+              <td>מדפי גבס דקורטיביים</td>
+              <td>₪450 עד ₪950 למדף</td>
+              <td>מדף לפי מידה כולל חיזוקים לפי צורך</td>
+            </tr>
+            <tr>
+              <td>סגירת קיר או מחיצה מגבס</td>
+              <td>₪350 עד ₪650 למ"ר</td>
+              <td>שלד כפול לפי צורך בידוד אם נדרש</td>
+            </tr>
+            <tr>
+              <td>נישות קטנות דקורטיביות</td>
+              <td>₪350 עד ₪1,200</td>
+              <td>לפי גודל עומק והכנות תאורה</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-    // פתיחה דרך לחיצה על label של checkbox במובייל
-    // שמירה על class menu-open כדי לנעול גלילה ברקע
-    toggle.addEventListener('change', ()=> setMenu(toggle.checked));
-  </script>
-</body>
-</html>
+  <!-- PROCESS -->
+  <section id="process" class="section anchor-pad" style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <h2>תהליך עבודה</h2>
+      <p class="desc">ככה זה עובד בצורה מקצועית ופשוטה.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>1 שליחת פרטים</h3>
+          <p>תמונה של החלל מידות משוערות ותיאור מה רוצים לבצע.</p>
+        </div>
+        <div class="card">
+          <h3>2 תכנון ומדידה</h3>
+          <p>קובעים מדידה מחליטים על גבהים תאורה ונקודות לפי הצורך.</p>
+        </div>
+        <div class="card">
+          <h3>3 הצעת מחיר מסודרת</h3>
+          <p>הצעה ברורה לפי פריטים כדי שתדעו בדיוק על מה משלמים.</p>
+        </div>
+        <div class="card">
+          <h3>4 ביצוע</h3>
+          <p>ביצוע מסודר עם שמירה על סביבת עבודה נקייה ככל האפשר.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section anchor-pad">
+    <div class="wrap">
+      <h2>יצירת קשר</h2>
+      <p class="desc">
+        לשליחת הצעת מחיר מהירה הכי טוב לשלוח בווטסאפ תמונה של החלל והמידות.
+      </p>
+
+      <div class="contact">
+        <div class="row">
+          <a class="btn btn-primary" href="https://wa.me/972520000000" target="_blank" rel="nofollow">
+            <i class="fa-brands fa-whatsapp"></i> שלחו בווטסאפ
+          </a>
+          <a class="btn btn-ghost" href="tel:0520000000">
+            <i class="fa-solid fa-phone"></i> התקשרו עכשיו
+          </a>
+        </div>
+        <p class="small" style="margin-top:10px;color:var(--muted);font-weight:600">
+          החליפו מספרים אמיתיים לפני פרסום.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year">2026</span> עבודות גבס מקצועיות
+  </div>
+</footer>
+
+<script src="js/scripts.js"></script>
+
+</body></html>
