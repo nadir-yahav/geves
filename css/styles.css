@@ -398,8 +398,7 @@ header{
   display:flex;
   flex-direction:column;
 }
-.card:hover{
-  transform:translateY(-4px);
+.card{
   box-shadow:0 8px 24px rgba(15,23,42,.12);
 }
 .card h3{
@@ -465,7 +464,7 @@ header{
 .service-1{
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
   color:#00bcd4;
-  border:2px solid rgba(0, 188, 212, 0.3);
+  /* border:2px solid rgba(0, 188, 212, 0.3); */
 }
 .service-1 .service-icon{
   color:#00bcd4;
@@ -481,7 +480,7 @@ header{
 .service-2{
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
   color:#9c27b0;
-  border:2px solid rgba(156, 39, 176, 0.3);
+  /* border:2px solid rgba(156, 39, 176, 0.3); */
 }
 .service-2 .service-icon{
   color:#9c27b0;
@@ -497,7 +496,7 @@ header{
 .service-3{
   background:linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
   color:#4caf50;
-  border:2px solid rgba(76, 175, 80, 0.3);
+  /* border:2px solid rgba(76, 175, 80, 0.3); */
 }
 .service-3 .service-icon{
   color:#4caf50;
@@ -510,7 +509,7 @@ header{
 .service-4{
   background:linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
   color:#ff9800;
-  border:2px solid rgba(255, 152, 0, 0.3);
+  /* border:2px solid rgba(255, 152, 0, 0.3); */
 }
 .service-4 .service-icon{
   color:#ff9800;
@@ -542,7 +541,7 @@ header{
 /* Step 1 - Blue/Turquoise (WhatsApp) */
 .step-1{
   background:linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
-  border:2px solid #00bcd4;
+  /* border:2px solid #00bcd4; */
 }
 .step-1 .step-icon{
   color:#00bcd4;
@@ -551,7 +550,7 @@ header{
 /* Step 2 - Purple (Planning) */
 .step-2{
   background:linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
-  border:2px solid #9c27b0;
+  /* border:2px solid #9c27b0; */
 }
 .step-2 .step-icon{
   color:#9c27b0;
@@ -560,7 +559,7 @@ header{
 /* Step 3 - Green (Pricing) */
 .step-3{
   background:linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
-  border:2px solid #4caf50;
+  /* border:2px solid #4caf50; */
 }
 .step-3 .step-icon{
   color:#4caf50;
@@ -569,7 +568,7 @@ header{
 /* Step 4 - Orange (Execution) */
 .step-4{
   background:linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
-  border:2px solid #ff9800;
+  /* border:2px solid #ff9800; */
 }
 .step-4 .step-icon{
   color:#ff9800;
