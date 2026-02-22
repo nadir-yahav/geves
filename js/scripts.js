@@ -18,23 +18,44 @@ document.querySelectorAll('.drawer a[href^="#"]').forEach(a=>{
   a.addEventListener('click', ()=> setTimeout(closeDrawer, 120));
 });
 
-// Contact Form - שליחה לווטסאפ
+// Contact Form - שליחה למייל דרך EmailJS
 const contactForm = document.getElementById('contactForm');
 if(contactForm){
+  // Initialize EmailJS with your public key
+  // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+  emailjs.init('YOUR_PUBLIC_KEY');
+  
   contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> שולח...';
+    submitBtn.disabled = true;
     
-    let whatsappMessage = `שלום, אני ${name}%0A`;
-    whatsappMessage += `טלפון: ${phone}%0A`;
-    if(email) whatsappMessage += `אימייל: ${email}%0A`;
-    if(message) whatsappMessage += `%0Aפרטים:%0A${message}`;
-    
-    const whatsappUrl = `https://wa.me/972547556267?text=${whatsappMessage}`;
-    window.open(whatsappUrl, '_blank');
+    // Send email using EmailJS
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+      .then(function() {
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> נשלח בהצלחה!';
+        submitBtn.style.background = '#10b981';
+        contactForm.reset();
+        
+        setTimeout(()=>{
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+        }, 3000);
+      }, function(error) {
+        console.error('Failed to send email:', error);
+        submitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> שגיאה, נסה שוב';
+        submitBtn.style.background = '#ef4444';
+        
+        setTimeout(()=>{
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+        }, 3000);
+      });
   });
 }
