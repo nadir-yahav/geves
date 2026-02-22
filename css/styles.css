@@ -337,8 +337,7 @@ header{
   width:100%;
   height:220px;
   background-size:cover;
-  border-radius: 5px;
-  /* background-position: bottom; */
+  background-position:center;
   position:relative;
   clip-path: polygon(
     0% 0%, 
@@ -369,30 +368,29 @@ header{
 .card-image::before{
   content:'';
   position:absolute;
-  bottom:-12px;
+  inset:0;
+  background:currentColor;
+  mix-blend-mode:overlay;
+  opacity:0.35;
+  z-index:1;
+  pointer-events:none;
+}
+.card-image::after{
+  content:'';
+  position:absolute;
+  bottom:-8px;
   left:0;
   right:0;
-  height:12px;
+  height:8px;
   background: repeating-linear-gradient(
     90deg,
     currentColor 0px,
     currentColor 2px,
     transparent 2px,
-    transparent 6px
+    transparent 7px
   );
-  opacity:0.12;
+  opacity:0.2;
   z-index:2;
-}
-.card-image::after{
-  content:'';
-  position:absolute;
-  bottom:-6px;
-  left:0;
-  right:0;
-  height:6px;
-  background:linear-gradient(to bottom, currentColor, transparent);
-  opacity:0.15;
-  z-index:1;
 }
 .card-content{
   padding:20px;
@@ -473,7 +471,7 @@ header{
   color:#00bcd4;
 }
 .service-1 .card-image{
-  box-shadow:inset 0 0 80px rgba(0, 188, 212, 0.12), 0 4px 20px rgba(0, 188, 212, 0.15);
+  box-shadow:0 4px 20px rgba(0, 188, 212, 0.2);
 }
 
 /* Service 2 - Purple (Lighting) */
@@ -486,7 +484,7 @@ header{
   color:#9c27b0;
 }
 .service-2 .card-image{
-  box-shadow:inset 0 0 80px rgba(156, 39, 176, 0.12), 0 4px 20px rgba(156, 39, 176, 0.15);
+  box-shadow:0 4px 20px rgba(156, 39, 176, 0.2);
 }
 
 /* Service 3 - Green (TV Wall) */
@@ -499,7 +497,7 @@ header{
   color:#4caf50;
 }
 .service-3 .card-image{
-  box-shadow:inset 0 0 80px rgba(76, 175, 80, 0.12), 0 4px 20px rgba(76, 175, 80, 0.15);
+  box-shadow:0 4px 20px rgba(76, 175, 80, 0.2);
 }
 
 /* Service 4 - Orange (Shelves) */
@@ -512,7 +510,7 @@ header{
   color:#ff9800;
 }
 .service-4 .card-image{
-  box-shadow:inset 0 0 80px rgba(255, 152, 0, 0.12), 0 4px 20px rgba(255, 152, 0, 0.15);
+  box-shadow:0 4px 20px rgba(255, 152, 0, 0.2);
 }
 
 /* Process Steps */
