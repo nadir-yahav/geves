@@ -573,9 +573,23 @@ td:nth-child(3){color:var(--muted);font-weight:600}
   outline:none;
   border-color:var(--red);
 }
+.form-group input.error,
+.form-group textarea.error{
+  border-color:#ef4444;
+  background:#fef2f2;
+}
 .form-group textarea{
   resize:vertical;
   min-height:120px;
+}
+.error-message{
+  display:block;
+  color:#ef4444;
+  font-size:14px;
+  font-weight:600;
+  margin-top:6px;
+  direction:rtl;
+  text-align:right;
 }
 .form-submit{
   margin-top:20px;
