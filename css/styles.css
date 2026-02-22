@@ -255,7 +255,6 @@ header{
   background:#fff;
   color:var(--ink);
   min-width:170px;
-  font-size:17px;
   font-family:Heebo,sans-serif;
   cursor:pointer;
   transition:all .2s;
