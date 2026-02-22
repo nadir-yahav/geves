@@ -255,6 +255,15 @@ header{
   background:#fff;
   color:var(--ink);
   min-width:170px;
+  font-size:17px;
+  font-family:Heebo,sans-serif;
+  cursor:pointer;
+  transition:all .2s;
+}
+button.btn{
+  /* Reset button defaults */
+  -webkit-appearance:none;
+  appearance:none;
 }
 .btn-primary{
   background:linear-gradient(180deg,var(--red),var(--red-700));
@@ -262,6 +271,10 @@ header{
   box-shadow:0 14px 28px rgba(225,29,47,.20);
 }
 .btn-primary:active{transform:translateY(1px)}
+.btn-primary:disabled{
+  opacity:0.7;
+  cursor:not-allowed;
+}
 .btn-ghost:hover{background:var(--soft)}
 @media(max-width:420px){
   .btn{min-width:100%}
